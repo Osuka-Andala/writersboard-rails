@@ -322,3 +322,88 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-25 15:46:46 +0300
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2015-08-25 16:55:56 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#new as HTML
+  Rendered stories/new.html.erb within layouts/application (375.0ms)
+Completed 200 OK in 663ms (Views: 648.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-25 16:55:57 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-25 16:55:57 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-25 16:55:57 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-25 16:55:57 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-25 16:55:57 +0300
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-25 16:55:57 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-25 16:55:57 +0300
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-08-25 16:57:06 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M2X/T7gNCkTSwLyoMRvpVMSWRpiPYgR15+16hiABfcC1jwdZJKIwnZsaJJCwwNuKa4zgth8tYYv9vnm1hHQdJw==", "story"=>{"title"=>"I Want Love", "writer"=>"Osuka Andala", "preview"=>"I want to wake up at 3 am in the morning just to make sure I am alive because I cant wait to see your face. I want to look into your eyes and see the sun set on a rainy day, To see 9 rainbows in the dark sky and a full moon on cloudy night.", "url"=>""}, "commit"=>"Create Story"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mStory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "stories" WHERE "stories"."url" = '' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered stories/new.html.erb within layouts/application (54.2ms)
+Completed 200 OK in 195ms (Views: 76.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-08-25 16:58:38 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"f3zO5zDi1fsKeVVXfvMEj371e/qjNFqaqKiq+Efem0b5ljbxrE3vIkOjzW//KDZR0e/d1DN7P2Sy+6nL46v7oQ==", "story"=>{"title"=>"I Want Love", "writer"=>"Osuka Andala", "preview"=>"I want to wake up at 3 am in the morning just to make sure I am alive because I cant wait to see your face. I want to look into your eyes and see the sun set on a rainy day, To see 9 rainbows in the dark sky and a full moon on cloudy night.", "url"=>"http://thistruthismine.blogspot.co.ke/2014/04/i-want-love.html"}, "commit"=>"Create Story"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mStory Exists (0.1ms)[0m  SELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/2014/04/i-want-love.html' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "stories" ("title", "writer", "preview", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "I Want Love"], ["writer", "Osuka Andala"], ["preview", "I want to wake up at 3 am in the morning just to make sure I am alive because I cant wait to see your face. I want to look into your eyes and see the sun set on a rainy day, To see 9 rainbows in the dark sky and a full moon on cloudy night."], ["url", "http://thistruthismine.blogspot.co.ke/2014/04/i-want-love.html"], ["created_at", "2015-08-25 13:58:38.243706"], ["updated_at", "2015-08-25 13:58:38.243706"]]
+  [1m[35m (162.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 167ms (ActiveRecord: 162.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-25 16:58:38 +0300
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-25 17:31:29 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories"
+  Rendered stories/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 3103ms (Views: 3091.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-25 17:31:33 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-25 17:31:33 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-25 17:31:33 +0300
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-25 17:31:33 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-25 17:31:33 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-25 17:31:33 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-25 17:31:33 +0300
