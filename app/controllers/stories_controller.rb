@@ -3,5 +3,6 @@ class StoriesController < ApplicationController
   end
 
   def new
+    @story  = Story.new
   end
 end
