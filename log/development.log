@@ -407,3 +407,60 @@ Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd81
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-25 17:31:33 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-25 18:00:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories"
+  Rendered stories/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 2480ms (Views: 2470.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/stories.self-50b092cb39597569cd7060c50fdea65cc6d39bc0c3a84a5c94ae1a90bc903e41.css?body=1" for 127.0.0.1 at 2015-08-25 18:00:46 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-25 18:00:46 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-25 18:00:46 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-25 18:00:46 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-25 18:00:46 +0300
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-25 18:00:46 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-25 18:00:46 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-25 18:04:03 +0300
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT  "stories".* FROM "stories" LIMIT 25 OFFSET 0[0m
+  Rendered stories/index.html.erb within layouts/application (73.5ms)
+Completed 200 OK in 112ms (Views: 105.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/stories.self-50b092cb39597569cd7060c50fdea65cc6d39bc0c3a84a5c94ae1a90bc903e41.css?body=1" for 127.0.0.1 at 2015-08-25 18:04:03 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-25 18:04:03 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-25 18:04:03 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-25 18:04:03 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-25 18:04:03 +0300
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-25 18:04:03 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-25 18:04:03 +0300

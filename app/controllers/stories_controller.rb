@@ -1,6 +1,6 @@
 class StoriesController < ApplicationController
   def index
-    @stories = Story.all
+    @stories = Story.page(params[:page]).per(25)
   end
 
   def new
