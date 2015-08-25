@@ -7,7 +7,7 @@ class StoriesController < ApplicationController
   end
 
   def create
-    @story = Story.new
+    @story = Story.new(params.require(:story).permit(:title, :writer, :preview, :url))
     if @story.save
       redirect_to root_path
     else
