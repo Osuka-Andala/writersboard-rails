@@ -1,2 +1,10 @@
-<h1>Stories#index</h1>
-<p>Find me in app/views/stories/index.html.erb</p>
+<h1>Stories</h1>
+
+<% @stories.each do |story| %>
+  <div class="story">
+    <h2><%= link_to story.title, story.url %></h2>
+    <p><%= story.writer %>
+  </div>
+<% end %>
+
+<p><%= link_to "Add a story", new_story_path %></p> -->
