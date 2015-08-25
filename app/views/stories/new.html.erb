@@ -1,2 +1,7 @@
-<h1>Stories#new</h1>
-<p>Find me in app/views/stories/new.html.erb</p>
+<%= simple_form_for @story do |form| %>
+  <%= form.input :title, label: "Story Title" %>
+  <%= form.input :writer, label: "Your name" %>
+  <%= form.input :preview, label: "Your preview" %>
+  <%= form.input :url, label: "Link to story" %>
+  <%= form.button :submit %>
+<% end %>
