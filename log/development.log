@@ -270,3 +270,55 @@ Processing by StoriesController#index as HTML
   [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
   Rendered stories/index.html.erb within layouts/application (1.4ms)
 Completed 200 OK in 28ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2015-08-25 15:42:38 +0300
+Processing by StoriesController#new as HTML
+  Rendered stories/new.html.erb within layouts/application (100.8ms)
+Completed 200 OK in 128ms (Views: 121.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-08-25 15:45:19 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"REhIjHSDDvRtrTBvg5D5cZQS+9LctQ7Rnl01ZUt71rrCorCa6Cw0LSR3qFcCS8uvOwhd/Ez6ay+EDjZW7w62XQ==", "story"=>{"title"=>"One Resolution", "writer"=>"Osuka Andala", "preview"=>"You may have noticed that I have not written anything in a long time. I will not make any excuses but I will give you an actual reason.", "url"=>"http://thistruthismine.blogspot.co.ke/2015/07/re-definition.html"}, "commit"=>"Create Story"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mStory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/2015/07/re-definition.html' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "stories" ("title", "writer", "preview", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "One Resolution"], ["writer", "Osuka Andala"], ["preview", "You may have noticed that I have not written anything in a long time. I will not make any excuses but I will give you an actual reason."], ["url", "http://thistruthismine.blogspot.co.ke/2015/07/re-definition.html"], ["created_at", "2015-08-25 12:45:19.742066"], ["updated_at", "2015-08-25 12:45:19.742066"]]
+  [1m[36m (2188.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 2256ms (ActiveRecord: 2189.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-25 15:45:21 +0300
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"
+  Rendered stories/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-25 15:46:46 +0300
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 27ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-08-25 15:46:46 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-08-25 15:46:46 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-08-25 15:46:46 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-08-25 15:46:46 +0300
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-08-25 15:46:46 +0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-08-25 15:46:46 +0300
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-08-25 15:46:46 +0300

@@ -3,6 +3,7 @@
 <% @stories.each do |story| %>
   <div class="story">
     <h2><%= link_to story.title, story.url %></h2>
+    <p><%= story.preview %>
     <p><%= story.writer %>
   </div>
 <% end %>
