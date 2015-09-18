@@ -499,3 +499,152 @@ Started GET "/stories/new" for 127.0.0.1 at 2015-08-25 18:06:46 +0300
 Processing by StoriesController#new as HTML
   Rendered stories/new.html.erb within layouts/application (2551.6ms)
 Completed 200 OK in 2579ms (Views: 2576.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-18 04:09:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" LIMIT 25 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 457ms (Views: 439.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-18 04:09:36 +0300
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" LIMIT 25 OFFSET 0
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/stories.self-50b092cb39597569cd7060c50fdea65cc6d39bc0c3a84a5c94ae1a90bc903e41.css?body=1" for 127.0.0.1 at 2015-09-18 04:09:36 +0300
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-09-18 04:09:36 +0300
+
+
+Started GET "/assets/jquery_ujs.self-ca5248a2fad13d6bd58ea121318d642f195f0b2dd818b30615f785ff365e8d1f.js?body=1" for 127.0.0.1 at 2015-09-18 04:09:36 +0300
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-09-18 04:09:36 +0300
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2015-09-18 04:10:14 +0300
+Processing by StoriesController#new as HTML
+  Rendered stories/new.html.erb within layouts/application (297.7ms)
+Completed 200 OK in 334ms (Views: 332.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-09-18 04:16:25 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PLbYmJj8PpfQtV2zbtes6wFwIwHSF1pAqL5/u05KsZXuMnXr2PyVand31lydlvLl8xPr+51qTz0MvHAWFkeeaQ==", "story"=>{"title"=>"Remember to Remember", "writer"=>"Osuka Andala", "preview"=>"Life is a Bitch, that's for sure. But when dealing with a bitch, there are ways around it. She is either your friend or your enemy. As your friend, she will love you with all the loyalty in the world and as your enemy, well, you would be attached to another", "url"=>"http://thistruthismine.blogspot.co.ke/"}, "commit"=>"Create Story"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mStory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "stories" ("title", "writer", "preview", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["title", "Remember to Remember"], ["writer", "Osuka Andala"], ["preview", "Life is a Bitch, that's for sure. But when dealing with a bitch, there are ways around it. She is either your friend or your enemy. As your friend, she will love you with all the loyalty in the world and as your enemy, well, you would be attached to another"], ["url", "http://thistruthismine.blogspot.co.ke/"], ["created_at", "2015-09-18 01:16:30.310024"], ["updated_at", "2015-09-18 01:16:30.310024"]]
+  [1m[36m (92.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5120ms (ActiveRecord: 93.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-18 04:16:30 +0300
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT  "stories".* FROM "stories" LIMIT 25 OFFSET 0
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "stories"[0m
+  Rendered stories/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 51ms (Views: 48.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stories/new" for 127.0.0.1 at 2015-09-18 04:16:35 +0300
+Processing by StoriesController#new as HTML
+  Rendered stories/new.html.erb within layouts/application (99.2ms)
+Completed 200 OK in 132ms (Views: 130.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-09-18 04:17:47 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nW8CBh5vSB/rGpGpVZ3HOcD8mpflI9nQ++GwqUMFathP6691Xm/j4kzYGkam3Jk3Mp9SbapezK1f478EGwhFJA==", "story"=>{"title"=>"Some Nights", "writer"=>"Osuka Andala", "preview"=>"‘Ssup! It’s been a while, huh? What can I say, I’ve been busy. Busy making friends, Busy falling in love, Busy taking exams, Busy going to work, Christmas, New Years. Then busy falling out of love. Basically too busy living my life.", "url"=>"http://thistruthismine.blogspot.co.ke/"}, "commit"=>"Create Story"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mStory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/' LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  Rendered stories/new.html.erb within layouts/application (104.3ms)
+Completed 200 OK in 144ms (Views: 136.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-09-18 04:17:54 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"X9aGlJJT7UEcGzQmrUOBk+5hsyXwRVBeQNxsE+qeSEaNUivn0lNGvLvZv8leAt+dHAJ73784RSPk3mO+spNnug==", "story"=>{"title"=>"Some Nights", "writer"=>"Osuka Andala", "preview"=>"‘Ssup! It’s been a while, huh? What can I say, I’ve been busy. Busy making friends, Busy falling in love, Busy taking exams, Busy going to work, Christmas, New Years. Then busy falling out of love. Basically too busy living my life.", "url"=>"http://thistruthismine.blogspot.co.ke/"}, "commit"=>"Create Story"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mStory Exists (0.3ms)[0m  SELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered stories/new.html.erb within layouts/application (73.1ms)
+Completed 200 OK in 108ms (Views: 101.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-09-18 04:18:00 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZkQL8lK6yXhtIM7z2HE5RokSvAuF1UFcMddfhiWtl7q0wKaBErpihcriRRwrMGdIe3F08cqoVCGV1VArfaC4Rg==", "story"=>{"title"=>"Some Nights", "writer"=>"Osuka Andala", "preview"=>"‘Ssup! It’s been a while, huh? What can I say, I’ve been busy. Busy making friends, Busy falling in love, Busy taking exams, Busy going to work, Christmas, New Years. Then busy falling out of love. Basically too busy living my life.", "url"=>"http://thistruthismine.blogspot.co.ke/"}, "commit"=>"Create Story"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mStory Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered stories/new.html.erb within layouts/application (94.7ms)
+Completed 200 OK in 133ms (Views: 127.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-09-18 04:18:04 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U1I/Vu6oKFBPXd3XA9TOx9fFtvvoZ8aCktaqYNpRKf6B1pIlrqiDreifVjjwlZDJJaZ+Aaca0/821KXNglwGAg==", "story"=>{"title"=>"Some Nights", "writer"=>"Osuka Andala", "preview"=>"‘Ssup! It’s been a while, huh? What can I say, I’ve been busy. Busy making friends, Busy falling in love, Busy taking exams, Busy going to work, Christmas, New Years. Then busy falling out of love. Basically too busy living my life.", "url"=>"http://thistruthismine.blogspot.co.ke/"}, "commit"=>"Create Story"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mStory Exists (0.4ms)[0m  SELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  Rendered stories/new.html.erb within layouts/application (89.7ms)
+Completed 200 OK in 132ms (Views: 124.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-09-18 04:18:04 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zawMt340RX0qe/prmO95SVIF19e/zXmOvlPMOoPlXAYfKKHEPjTugI25cYRrridHoGYfLfCwbPMaUcOX2+hz+g==", "story"=>{"title"=>"Some Nights", "writer"=>"Osuka Andala", "preview"=>"‘Ssup! It’s been a while, huh? What can I say, I’ve been busy. Busy making friends, Busy falling in love, Busy taking exams, Busy going to work, Christmas, New Years. Then busy falling out of love. Basically too busy living my life.", "url"=>"http://thistruthismine.blogspot.co.ke/"}, "commit"=>"Create Story"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mStory Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  Rendered stories/new.html.erb within layouts/application (72.8ms)
+Completed 200 OK in 113ms (Views: 107.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-09-18 04:18:04 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3HU5Le4+4C0O6lDEL20lZZDF+rFrUkcyZ+XdrH10z/19XmX97hQfRP5Iqzj/OqbZCDfEIrQXGFtnZjb6fj8ww==", "story"=>{"title"=>"Some Nights", "writer"=>"Osuka Andala", "preview"=>"‘Ssup! It’s been a while, huh? What can I say, I’ve been busy. Busy making friends, Busy falling in love, Busy taking exams, Busy going to work, Christmas, New Years. Then busy falling out of love. Basically too busy living my life.", "url"=>"http://thistruthismine.blogspot.co.ke/"}, "commit"=>"Create Story"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mStory Exists (0.2ms)[0m  SELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/' LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  Rendered stories/new.html.erb within layouts/application (68.1ms)
+Completed 200 OK in 100ms (Views: 94.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-09-18 04:18:05 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d9ogjaiNrDHWyOtQ0wEKWeCPQr5ab4iNgbiofHx2uHKlXo3+6I0HzHEKYL8gQFRXEuyKRBUSnfAluqfRJHuXjg==", "story"=>{"title"=>"Some Nights", "writer"=>"Osuka Andala", "preview"=>"‘Ssup! It’s been a while, huh? What can I say, I’ve been busy. Busy making friends, Busy falling in love, Busy taking exams, Busy going to work, Christmas, New Years. Then busy falling out of love. Basically too busy living my life.", "url"=>"http://thistruthismine.blogspot.co.ke/"}, "commit"=>"Create Story"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mStory Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered stories/new.html.erb within layouts/application (53.8ms)
+Completed 200 OK in 86ms (Views: 83.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/stories" for 127.0.0.1 at 2015-09-18 04:18:59 +0300
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SVa2Zo2gykNG/2LG1BHovA41BQ4t68gwRJNfuUXMQhWb0hsVzaBhvuE96SknULay/FbN9GKW3U3gkVAUHcFt6Q==", "story"=>{"title"=>"Some Nights", "writer"=>"Osuka Andala", "preview"=>"‘Ssup! It’s been a while, huh? What can I say, I’ve been busy. Busy making friends, Busy falling in love, Busy taking exams, Busy going to work, Christmas, New Years. Then busy falling out of love. Basically too busy living my life.", "url"=>"http://thistruthismine.blogspot.co.ke/2013/01/some-nights-i-dont-win.html"}, "commit"=>"Create Story"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mStory Exists (0.1ms)[0m  SELECT  1 AS one FROM "stories" WHERE "stories"."url" = 'http://thistruthismine.blogspot.co.ke/2013/01/some-nights-i-dont-win.html' LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "stories" ("title", "writer", "preview", "url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Some Nights"], ["writer", "Osuka Andala"], ["preview", "‘Ssup! It’s been a while, huh? What can I say, I’ve been busy. Busy making friends, Busy falling in love, Busy taking exams, Busy going to work, Christmas, New Years. Then busy falling out of love. Basically too busy living my life."], ["url", "http://thistruthismine.blogspot.co.ke/2013/01/some-nights-i-dont-win.html"], ["created_at", "2015-09-18 01:18:59.255903"], ["updated_at", "2015-09-18 01:18:59.255903"]]
+  [1m[35m (2358.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 2364ms (ActiveRecord: 2359.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-09-18 04:19:01 +0300
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" LIMIT 25 OFFSET 0[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "stories"
+  Rendered stories/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.3ms)
