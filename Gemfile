@@ -27,8 +27,10 @@ gem 'materialize-sass', '~> 0.96.1'
 
 gem 'pg'
 
-gem 'rails_12factor', group: :production
+gem 'simple_form', '~> 3.1.1'
+gem 'kaminari'
 
+gem 'rails_12factor', group: :production
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -50,9 +52,6 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-
-  gem 'simple_form'
-  gem 'kaminari'
 end
 
-ruby "2.2.0"
+ruby "2.2.3"
