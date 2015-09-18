@@ -1935,3 +1935,5 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/cafe-84fba2a5c083cc206669f5cffb4f43c3aa8a1d246c62a94262a26c176e82d76b.jpg" for 127.0.0.1 at 2015-09-18 05:00:40 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
